@@ -12,11 +12,12 @@ body{
     grid-template-rows: 95px 1fr;
     padding: 23px 1% 0 1%;
     column-gap: 2%;
+    row-gap: 2%;
     grid-template-areas:"log log menu menu menu menu menu menu opc opc"
                         "pro pro pro pro pro info info info info info";
 }
 .logo{
-    background-color: aqua;
+    /* background-color: aqua; */
     grid-area: log;
     display: flex;
     justify-content: center;
@@ -29,7 +30,7 @@ body{
     object-fit: contain;
 }
 .menu{
-    background-color: green;
+    /* background-color: green; */
     grid-area: menu;
     display: flex;
     justify-content: center;
@@ -49,7 +50,7 @@ body{
     font-size: 28px;
 }
 .options{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     grid-area: opc;
     display: flex;
     justify-content: flex-end;
@@ -64,59 +65,74 @@ body{
     object-fit: contain;
 }
 .product{
-    background: red;
+    /* background: red; */
     grid-area: pro;
-    width: 708px;
-    height: 663px;
+    width: 48svw;
+    height: 88svh;
     position: relative;
 }
 .product__title{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
+    top: 30px;
 }
 .product__text{
     display: flex;
     justify-content: center ;
     align-items: center;
     flex-direction: column;
-    /* width: 304px;
-    height: 123px; */
 }
 .product__text p{
     text-align: center;
-    font-family: "sweadScript-Regular";
+    font-family: "SeaweedScript-Regular";
     font-size: 24px;
+    line-height: 1;
 }
 .product__text h1{
     text-align: center;
     font-family: "lalezar-Regular";
     font-size: 64px;
+    line-height: 1;
 }
 .product__text h3{
     text-align: center;
     font-family: "lalezar-Regular";
     font-size: 32px;
+    line-height: 0;
 }
 .product__img img{
     position: absolute;
-    height: 663px;
+    height: 88svh;
     object-fit: contain;
     bottom: 0;
-    width: 100%;
-    max-width: 5fr;
 }
-.product__img img{
-    /* width: 100%; */
-    /* max-width: 5fr; */
-    position: absolute;
+.product__img img:nth-child(1){
+    z-index: 1;
+    transform: rotate(32.69deg);
+    transform-origin: 35% 20%;
+}
+.product__img img:nth-child(2){
+    z-index: 10;
+    transform: rotate(56.18deg);
+    transform-origin: 41% 60%;
+}
+.product__img img:nth-child(3){
+    z-index: 5;
+    transform: rotate(85.74deg);
+    transform-origin: 27% 66%;
 }
 .info{
-    background-color: orange;
+    /* background-color: orange; */
     grid-area: info;
-    display: grid;
-    width: 100%;
-    height: 294px;
+    display: flex;
+    width: 48svw;
+    height: 88svh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 67px;
 }
 .info__text {
     display: flex;
@@ -131,23 +147,26 @@ body{
 }
 .info__text span{
     text-align: center;
-    font-family: "Lealezar-Regular";
-    font-size: 32px;
+    font-family: "Lalezar-Regular";
+    font-size: 32px;    
 }
 .info__text p{
-    text-align: center;
     font-family: "Inder-Regular";
     font-size: 24px;
 }
 .info__btn{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 72px;
+    position: relative;
+    right: -15svw;
 }
 .info__btn a{
     text-decoration: none;
     color: white;
     background: var(--color-2);
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 20px 34px;
+    border-radius: 10px;
+    font-family: "Inder-Regular";
+    font-size: 24px;
+    text-align: center;
 }
