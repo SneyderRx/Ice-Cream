@@ -1,0 +1,170 @@
+@import url(variables.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background: var(--color-1);
+    color: white; /*borrar despues*/
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 95px 1fr;
+    padding: 23px 1% 0 1%;
+    column-gap: 2%;
+    row-gap: 2%;
+    grid-template-areas:"log log menu menu menu menu menu menu opc opc"
+                        "pro pro pro pro pro info info info info info";
+}
+.logo{
+    background-color: aqua;
+    grid-area: log;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 158px;
+    height: 95px;
+    max-width: 2fr;
+    object-fit: contain;
+}
+.menu{
+    background-color: green;
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu ul{
+    display: flex;
+    gap: 33px;
+}
+.menu ul li{
+  list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Inter-SemiBold";
+    font-size: 28px;
+}
+.options{
+    background-color: blueviolet;
+    grid-area: opc;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+    padding-right: 67px;
+}
+.options img{
+    width: 24PX;
+    height: 24px;
+    max-width: 2fr;
+    object-fit: contain;
+}
+.product{
+    background: red;
+    grid-area: pro;
+    width: 48svw;
+    height: 88svh;
+    position: relative;
+}
+.product__title{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    top: 30px;
+}
+.product__text{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+}
+.product__text p{
+    text-align: center;
+    font-family: "SeaweedScript-Regular";
+    font-size: 24px;
+    line-height: 1;
+}
+.product__text h1{
+    text-align: center;
+    font-family: "lalezar-Regular";
+    font-size: 64px;
+    line-height: 1;
+}
+.product__text h3{
+    text-align: center;
+    font-family: "lalezar-Regular";
+    font-size: 32px;
+    line-height: 0;
+}
+.product__img img{
+    position: absolute;
+    height: 88svh;
+    object-fit: contain;
+    bottom: 0;
+}
+.product__img img:nth-child(1){
+    z-index: 1;
+    transform: rotate(32.69deg);
+    transform-origin: 45% 17%;
+}
+.product__img img:nth-child(2){
+    z-index: 10;
+    transform: rotate(56.18deg);
+}
+.product__img img:nth-child(3){
+    z-index: 5;
+    transform: rotate(85.74deg);
+}
+.info{
+    background-color: orange;
+    grid-area: info;
+    display: flex;
+    width: 48svw;
+    height: 88svh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 67px;
+}
+.info__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.info__text h1{
+    text-align: center;
+    font-family: "Inter-Bold";
+    font-size: 69.5px;
+}
+.info__text span{
+    text-align: center;
+    font-family: "Lealezar-Regular";
+    font-size: 32px;
+}
+.info__text p{
+    font-family: "Inder-Regular";
+    font-size: 24px;
+}
+.info__btn{
+    display: flex;
+    padding-top: 72px;
+    position: relative;
+    right: -15svw;
+}
+.info__btn a{
+    text-decoration: none;
+    color: white;
+    background: var(--color-2);
+    padding: 20px 34px;
+    border-radius: 5px;
+    font-family: "Inder-Regular";
+    font-size: 24px;
+    text-align: center;
+}
